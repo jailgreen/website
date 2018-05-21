@@ -1,0 +1,5 @@
+site_name: Jailgreen Website
+docs_dir: docs/book
+site_dir: docs/html
+pages:
+- index.md

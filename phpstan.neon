@@ -1,0 +1,14 @@
+includes:
+        - vendor/phpstan/phpstan-strict-rules/rules.neon
+        - vendor/phpstan/phpstan-phpunit/rules.neon
+        - vendor/jangregor/phpstan-prophecy/src/extension.neon
+parameters:
+        fileExtensions:
+                - php
+        reportUnmatchedIgnoredErrors: true
+        ignoreErrors:
+                # Virtual classes can be safely ignored
+                - '#Class Zend\\Expressive\\Router\\AuraRouter not found#'
+                - '#Class Zend\\Expressive\\Router\\ZendRouter not found#'
+                - '#Class Zend\\Expressive\\Twig\\TwigRenderer not found#'
+                - '#Class Zend\\Expressive\\ZendView\\ZendViewRenderer not found#'

@@ -1,0 +1,7 @@
+/*.log
+/phpunit.xml
+/coverage/
+/docs/html/
+/vendor/
+/nbproject/private/
+/node_modules/
