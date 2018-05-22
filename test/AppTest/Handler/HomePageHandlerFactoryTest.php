@@ -10,17 +10,13 @@ namespace AppTest\Handler;
 
 use App\Handler\HomePageHandler;
 use App\Handler\HomePageHandlerFactory;
-<<<<<<< HEAD
 use AppTest\ContainerTrait;
-=======
->>>>>>> Git init
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\ObjectProphecy;
 use Psr\Container\ContainerInterface;
 use Zend\Expressive\Router\RouterInterface;
 use Zend\Expressive\Template\TemplateRendererInterface;
 
-<<<<<<< HEAD
 /**
  * @group App
  */

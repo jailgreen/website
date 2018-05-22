@@ -11,8 +11,6 @@ namespace AppTest\Handler;
 use App\Handler\HomePageHandler;
 
 use AppTest\ContainerTrait;
-=======
->>>>>>> Git init
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Prophecy\ObjectProphecy;
