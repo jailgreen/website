@@ -49,6 +49,11 @@ class HomePageHandler implements RequestHandlerInterface
         $data = [];
 
         switch ($this->containerName) {
+            case 'Zend\ServiceManager\ServiceManager':
+                $data['containerName'] = 'Zend Servicemanager';
+                $data['containerDocs'] = 'https://docs.zendframework.com/zend-servicemanager/';
+                break;
+            // @codeCoverageIgnoreStart
             case 'Aura\Di\Container':
                 $data['containerName'] = 'Aura.Di';
                 $data['containerDocs'] = 'http://auraphp.com/packages/2.x/Di.html';
@@ -56,10 +61,6 @@ class HomePageHandler implements RequestHandlerInterface
             case 'Pimple\Container':
                 $data['containerName'] = 'Pimple';
                 $data['containerDocs'] = 'https://pimple.symfony.com/';
-                break;
-            case 'Zend\ServiceManager\ServiceManager':
-                $data['containerName'] = 'Zend Servicemanager';
-                $data['containerDocs'] = 'https://docs.zendframework.com/zend-servicemanager/';
                 break;
             case 'Auryn\Injector':
                 $data['containerName'] = 'Auryn';
@@ -69,22 +70,28 @@ class HomePageHandler implements RequestHandlerInterface
                 $data['containerName'] = 'Symfony DI Container';
                 $data['containerDocs'] = 'https://symfony.com/doc/current/service_container.html';
                 break;
+            // @codeCoverageIgnoreEnd
         }
 
+        // @codeCoverageIgnoreStart
         if ($this->router instanceof Router\AuraRouter) {
             $data['routerName'] = 'Aura.Router';
             $data['routerDocs'] = 'http://auraphp.com/packages/2.x/Router.html';
+            // @codeCoverageIgnoreEnd
         } elseif ($this->router instanceof Router\FastRouteRouter) {
             $data['routerName'] = 'FastRoute';
             $data['routerDocs'] = 'https://github.com/nikic/FastRoute';
+        // @codeCoverageIgnoreStart
         } elseif ($this->router instanceof Router\ZendRouter) {
             $data['routerName'] = 'Zend Router';
             $data['routerDocs'] = 'https://docs.zendframework.com/zend-router/';
         }
+        // @codeCoverageIgnoreEnd
 
         if ($this->template instanceof PlatesRenderer) {
             $data['templateName'] = 'Plates';
             $data['templateDocs'] = 'http://platesphp.com/';
+        // @codeCoverageIgnoreStart
         } elseif ($this->template instanceof TwigRenderer) {
             $data['templateName'] = 'Twig';
             $data['templateDocs'] = 'http://twig.sensiolabs.org/documentation';
@@ -92,6 +99,7 @@ class HomePageHandler implements RequestHandlerInterface
             $data['templateName'] = 'Zend View';
             $data['templateDocs'] = 'https://docs.zendframework.com/zend-view/';
         }
+        // @codeCoverageIgnoreEnd
 
         return new HtmlResponse($this->template->render('app::home-page', $data));
     }

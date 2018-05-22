@@ -8,6 +8,8 @@ declare(strict_types=1);
 
 namespace App;
 
+use Zend\ServiceManager\Factory\InvokableFactory;
+
 /**
  * The configuration provider for the App module
  *
@@ -36,11 +38,9 @@ class ConfigProvider
     public function getDependencies() : array
     {
         return [
-            'invokables' => [
-                Handler\PingHandler::class => Handler\PingHandler::class,
-            ],
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                Handler\PingHandler::class     => InvokableFactory::class,
             ],
         ];
     }
@@ -52,9 +52,7 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'app'    => [__DIR__ . '/../templates/app'],
-                'error'  => [__DIR__ . '/../templates/error'],
-                'layout' => [__DIR__ . '/../templates/layout'],
+                'app'    => ['templates/app'],
             ],
         ];
     }

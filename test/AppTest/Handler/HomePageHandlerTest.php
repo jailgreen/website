@@ -41,9 +41,6 @@ class HomePageHandlerTest extends TestCase
 
     public function testReturnsJsonResponseWhenNoTemplateRendererProvided()
     {
-        // $this->container = $this->->mockContainerInterface();
-        // $this->router    = $this->prophesize(RouterInterface::class);
-
         $homePage = new HomePageHandler(
             $this->router->reveal(),
             null,
@@ -58,9 +55,6 @@ class HomePageHandlerTest extends TestCase
 
     public function testReturnsHtmlResponseWhenTemplateRendererProvided()
     {
-        // $this->container = $this->prophesize(ContainerInterface::class);
-        // $this->router    = $this->prophesize(RouterInterface::class);
-
         $renderer = $this->prophesize(TemplateRendererInterface::class);
         $renderer
             ->render('app::home-page', Argument::type('array'))
