@@ -1,0 +1,11 @@
+/*
+@license    https://opensource.org/licenses/BSD-3-Clause New BSD License
+@copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
+*/
+/*
+    Created on : 29.5.2018, 12:58:08
+    Author     : jailgreen jukka@jahlgren.eu
+*/
+@mixin bg-image($color) {
+  background: $color url("/images/background-grad.png") repeat-x;
+}
