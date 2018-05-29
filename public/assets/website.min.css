@@ -1,0 +1,83 @@
+/*
+@license    https://opensource.org/licenses/BSD-3-Clause New BSD License
+@copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
+*/
+/*
+@license    https://opensource.org/licenses/BSD-3-Clause New BSD License
+@copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
+*/
+/*
+@license    https://opensource.org/licenses/BSD-3-Clause New BSD License
+@copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
+*/
+/*
+    Created on : 29.5.2018, 12:58:08
+    Author     : jailgreen jukka@jahlgren.eu
+*/
+/*
+@license    https://opensource.org/licenses/BSD-3-Clause New BSD License
+@copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
+*/
+#navigation {
+  float: right;
+  width: 150px; }
+
+#intro {
+  width: 450px; }
+
+body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 12px;
+  color: #3e3e3e;
+  background: #94c5eb url("/images/background-grad.png") repeat-x; }
+
+p {
+  padding: 1rem; }
+
+a {
+  color: #3687af; }
+
+#container {
+  width: 650px;
+  margin: 0 auto;
+  text-align: left; }
+
+#header {
+  height: 60px;
+  color: #172322;
+  background: transparent url("/images/header-corners.png") no-repeat bottom left; }
+  #header h1 {
+    padding: 0;
+    margin: 0; }
+
+#content {
+  padding: 0 15px 10px 15px;
+  background-color: #fff; }
+
+#footer {
+  padding: 1rem;
+  clear: both;
+  background-color: #fff; }
+
+h2 {
+  padding-top: 10px;
+  color: #d15600;
+  border-bottom: 2px solid #015287; }
+
+table {
+  width: 480px;
+  margin: 0 20px 20px 20px;
+  font-size: 12px;
+  border-collapse: collapse;
+  border-top: 2px solid #015287; }
+
+th {
+  padding: 3px 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #d15600;
+  text-align: left;
+  border-bottom: 2px solid #015287; }
+
+td {
+  padding: 6px; }
