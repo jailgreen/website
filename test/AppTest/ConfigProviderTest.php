@@ -48,6 +48,6 @@ class ConfigProviderTest extends TestCase
         self::assertArrayHasKey('templates', $config);
         self::assertInternalType('array', $config['dependencies']);
 
-        self::assertCount(2, $config['dependencies']['factories']);
+        self::assertCount(3, $config['dependencies']['factories']);
     }
 }

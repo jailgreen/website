@@ -16,6 +16,7 @@
     </rule>
 
     <!-- Paths to check -->
+    <exclude-pattern>*.js</exclude-pattern>
     <file>bin</file>
     <file>config</file>
     <file>src</file>

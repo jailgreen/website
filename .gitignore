@@ -5,3 +5,5 @@
 /vendor/
 /nbproject/private/
 /node_modules/
+public/js/*.map
+public/css/*.map

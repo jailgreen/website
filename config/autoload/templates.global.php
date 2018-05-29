@@ -11,6 +11,7 @@ return [
         'paths' => [
             'error'  => ['templates/error'],
             'layout' => ['templates/layout'],
+            'partial' => ['templates/partial'],
         ],
     ],
 ];

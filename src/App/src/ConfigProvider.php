@@ -40,6 +40,7 @@ class ConfigProvider
         return [
             'factories'  => [
                 Handler\HomePageHandler::class => Handler\HomePageHandlerFactory::class,
+                Handler\TestPageHandler::class => Handler\TestPageHandlerFactory::class,
                 Handler\PingHandler::class     => InvokableFactory::class,
             ],
         ];
