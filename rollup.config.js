@@ -79,4 +79,3 @@ export default [{
     include: 'assets/**'
   }
 }];
-

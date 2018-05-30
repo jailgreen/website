@@ -4,8 +4,8 @@
  */
 import '../scss/base.scss';
 import $ from 'jquery';
-import alerts from './module/alerts.js';
+import spoiler from './module/spoiler';
 
 $(() => {
-  alerts('Welcome to StarTrackr! Now no longer under police ...');
+  spoiler('.spoiler');
 });
