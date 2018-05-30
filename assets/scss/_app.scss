@@ -9,8 +9,7 @@
 
 #intro{ width: 450px; }
 
-body {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+.app {
   font-size: 12px;
   color: $body-color;
   @include bg-image($body-bg);

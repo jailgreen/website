@@ -25,8 +25,7 @@
 #intro {
   width: 450px; }
 
-body {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+.app {
   font-size: 12px;
   color: #3e3e3e;
   background: #94c5eb url("/images/background-grad.png") repeat-x; }

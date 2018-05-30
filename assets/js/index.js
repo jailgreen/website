@@ -3,7 +3,7 @@
  * @copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
  */
 import '../scss/base.scss';
-
+import $ from 'jquery';
 import alerts from './module/alerts.js';
 
 $(() => {
