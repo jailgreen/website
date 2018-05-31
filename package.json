@@ -11,13 +11,13 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "npm-run-all --parallel start watch",
+    "dev": "npm-run-all --parallel lint watch start",
     "watch": "rollup -c -w",
     "lint-css": "stylelint --syntax scss \"assets/scss/**/*.scss\"",
     "lint-vars": "node bin/lint-vars.js assets/scss",
     "lint": "npm-run-all --parallel lint-css lint-vars",
     "fix-js": "eslint assets/js/* --fix",
-    "start": "serve public"
+    "start": "livereload \"public/assets, templates/app\" -d"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "cssnano": "^3.10.0",
     "eslint-plugin-compat": "^2.3.0",
     "jquery": "^3.3.1",
+    "livereload": "^0.7.0",
     "npm-run-all": "^4.1.3",
     "popper.js": "^1.14.3",
     "postcss-syntax": "^0.10.0",
@@ -48,7 +49,6 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-sass": "^0.7.2",
     "rollup-plugin-uglify": "^4.0.0",
-    "serve": "^7.1.1",
     "stylelint": "^9.2.1",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0",

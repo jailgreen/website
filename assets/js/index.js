@@ -4,8 +4,6 @@
  */
 import '../scss/base.scss';
 import $ from 'jquery';
-import spoiler from './module/spoiler';
 
 $(() => {
-  spoiler('.spoiler');
 });

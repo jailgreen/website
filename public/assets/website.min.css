@@ -58,14 +58,14 @@
   clear: both;
   background-color: #fff; }
 
-.table {
+.app .table {
   font-size: 12px;
   border-collapse: collapse;
   border-top: 2px solid #015287; }
-  .table th,
-  .table td {
+  .app .table th,
+  .app .table td {
     padding: 0.75rem; }
-  .table thead th {
+  .app .table thead th {
     padding: 0.75rem;
     font-size: 14px;
     font-weight: 400;
