@@ -1,21 +1,25 @@
+import $ from 'jquery';
+
 /* 
  * @license    https://opensource.org/licenses/BSD-3-Clause New BSD License
  * @copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
  */
-import $ from 'jquery';
 
-const spoiler = element => {
-  $(element).hide();
-  $('<input type="button" class="btn btn-primary btn-sm revealer" ' +
-          'value="Tell Me!"/>').
-    insertBefore(element);
-  /* eslint-disable func-names */
-  $('.revealer').click(function() {
-    /* eslint-disable no-invalid-this */
-    $(this).hide();
-    $(this).next().
-      fadeIn();
-  });
+const Spoiler = () => {
+
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+  
+  const NAME = 'spoiler';
+  // const VERSION = '1.0.0-dev';
+  const DATA_KEY = 'ws.spoiler';
+  const EVENT_KEY = `.${DATA_KEY}`;
+  // const DATA_API_KEY = '.data-api';
+  const JQUERY_NO_CONFLICT = $.fn[NAME];
+  
 };
 
-export default spoiler;
+export default Spoiler;

@@ -10,14 +10,15 @@
     "test": "test"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "npm-run-all --parallel lint compile",
+    "compile": "rollup -c",
     "dev": "npm-run-all --parallel lint watch start",
     "watch": "rollup -c -w",
     "lint-css": "stylelint --syntax scss \"assets/scss/**/*.scss\"",
     "lint-vars": "node bin/lint-vars.js assets/scss",
     "lint": "npm-run-all --parallel lint-css lint-vars",
     "fix-js": "eslint assets/js/* --fix",
-    "start": "livereload \"public/assets, templates/app\" -d"
+    "start": "livereload \"public/assets, templates/app, templates/layout\" -d"
   },
   "repository": {
     "type": "git",
