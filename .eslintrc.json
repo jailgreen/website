@@ -4,6 +4,7 @@
         "es6": true
     },
     "globals": {
+      "BUILD": true
     },
     "extends": "eslint:recommended",
     "plugins": ["compat"],

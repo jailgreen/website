@@ -10,10 +10,10 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm-run-all --parallel lint compile",
+    "build": "npm-run-all lint compile",
     "compile": "rollup -c",
     "dev": "npm-run-all --parallel lint watch start",
-    "watch": "rollup -c -w",
+    "watch": "rollup -c -w --environment BUILD:development",
     "lint-css": "stylelint --syntax scss \"assets/scss/**/*.scss\"",
     "lint-vars": "node bin/lint-vars.js assets/scss",
     "lint": "npm-run-all --parallel lint-css lint-vars",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/jailgreen/website#readme",
   "devDependencies": {
-    "autoprefixer": "^8.5.1",
+    "autoprefixer": "^8.5.2",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
@@ -48,6 +48,7 @@
     "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-sass": "^0.7.2",
     "rollup-plugin-uglify": "^4.0.0",
     "stylelint": "^9.2.1",
