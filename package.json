@@ -18,7 +18,7 @@
     "lint-vars": "node bin/lint-vars.js assets/scss",
     "lint": "npm-run-all --parallel lint-css lint-vars",
     "fix-js": "eslint assets/js/* --fix",
-    "start": "livereload \"public/assets, templates/app, templates/layout\" -d"
+    "start": "livereload \"public/assets, templates/app, templates/layout\" -d -ee \"phtml\""
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/jailgreen/website#readme",
   "devDependencies": {
-    "autoprefixer": "^8.5.2",
+    "autoprefixer": "^8.6.0",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",

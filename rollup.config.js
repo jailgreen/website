@@ -19,7 +19,7 @@ import pkg from './package.json';
  */
 const production = !process.env.ROLLUP_WATCH;
 
-const globals = { 'jquery': 'jQuery' };
+const globals = { jquery: 'jQuery' };
 
 const postcssPlugins = [autoprefixer()];
 
