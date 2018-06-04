@@ -4,7 +4,9 @@
         "es6": true
     },
     "globals": {
-      "BUILD": true
+      "$": true,
+      "BUILD": true,
+      "jQuery": true
     },
     "extends": "eslint:recommended",
     "plugins": ["compat"],
@@ -45,7 +47,7 @@
         "func-call-spacing": "error",
         "func-name-matching": "error",
         "func-names": "error",
-        "func-style": ["error", "declaration"],
+        "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
         "function-paren-newline": "error",
         "generator-star-spacing": "error",
         "getter-return": "error",
@@ -174,7 +176,7 @@
         "no-script-url": "error",
         "no-self-compare": "error",
         "no-sequences": "error",
-        "no-shadow": ["error", { "allow": ["$"] }],
+        "no-shadow": "off",
         "no-shadow-restricted-names": "error",
         "no-spaced-func": "error",
         "no-sync": "error",
@@ -184,7 +186,7 @@
         "no-throw-literal": "error",
         "no-undef-init": "error",
         "no-undefined": "error",
-        "no-underscore-dangle": "error",
+        "no-underscore-dangle": "off",
         "no-unmodified-loop-condition": "error",
         "no-unneeded-ternary": "error",
         "no-unused-expressions": "error",
@@ -245,7 +247,7 @@
             "last"
         ],
         "sort-imports": "error",
-        "sort-keys": "error",
+        "sort-keys": "off",
         "sort-vars": "error",
         "space-before-blocks": "error",
         "space-before-function-paren": "off",
