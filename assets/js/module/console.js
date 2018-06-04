@@ -30,6 +30,10 @@ const Console = ( ($) => {
       $('body').prepend(div);
       $('#info').text(message);
       $('#info').prepend(button);
+    },
+    
+    info(message) {
+      this.log(message);
     }
   };
 

@@ -3,8 +3,8 @@
  * @copyright  (c) 2017-2018, jailgreen jukka@jahlgren.eu
  */
 import { existsSync, readFileSync, statSync } from 'fs';
-import { sync } from 'glob';
 import { join } from 'path';
+import { sync } from 'glob';
 
 const regExpQuote = (str) => str.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
 

@@ -1,7 +1,7 @@
 import '../scss/base.scss';
 
 import $ from 'jquery';
-import Console from './module/console.js';
+import menu from './module/jquery.menu';
 
 /* 
  * @license    https://opensource.org/licenses/BSD-3-Clause New BSD License
@@ -36,18 +36,13 @@ if (BUILD !== 'production') {
   
   const version = $.fn.jquery.split(' ')[0].split('.');
   const maxMajor = 4;
+  const minMajor = 3;
 
-  if (version[0] >= maxMajor ) {
+  if ( version[0] < minMajor || version[0] >= maxMajor ) {
     throw new Error('Website\'s JavaScript requires at least jQuery v3.0.0');
   }
 })($);
 
-$('.app-navbar li').hover(function() {
-  $(this).animate({ 'paddingLeft': '+=15px' }, 200);
-}, function() {
-  $(this).animate({ 'paddingLeft': '-=15px' }, 200);
-});
-
 $( () => {
-  Console.log(message);
+  $('.app-menu li').menu();
 });
