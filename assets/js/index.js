@@ -1,7 +1,10 @@
 import '../scss/base.scss';
 
+/* eslint-disable no-unused-vars */
 import $ from 'jquery';
+import Info from './module/jquery.plugin.info';
 import menu from './module/jquery.menu';
+/* eslint-enable no-unused-vars */
 
 /* 
  * @license    https://opensource.org/licenses/BSD-3-Clause New BSD License
@@ -15,18 +18,6 @@ if (BUILD !== 'production') {
   document.write(`<script src="http://${(location.host || 'localhost')
     .split(':')[0]}:35729/livereload.js?snipver=1"></script>`);
 }
-
-/*
- * Example 1
- *$(function() {
- *  ...
- *});
- *
- * Example 2
- * $( () => {
- * alert(message);
- * });
- */
 
 (($) => {
   if (typeof $ === 'undefined') {
@@ -43,6 +34,5 @@ if (BUILD !== 'production') {
   }
 })($);
 
-$( () => {
-  $('.app-menu li').menu();
-});
+$('body').info(message);
+$('.app-menu li').menu();
